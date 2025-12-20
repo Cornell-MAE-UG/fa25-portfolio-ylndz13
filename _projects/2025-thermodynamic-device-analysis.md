@@ -33,13 +33,14 @@ For ENGRD 2210 Thermodynamics, we experimented with heat exchangers in a minilab
 4. How much entropy is generated?
 
 <h5> Schematic: </h5>
-<img src="/assets/images/ENGRD-2210-Parallel-Flow.jpg"
+<img src="{{ '/assets/images/ENGRD-2210-Parallel-Flow.jpg' | relative_url }}"
      style="display: block; width: 100%; margin: 2rem auto;">
-<img src="/assets/images/ENGRD-2210-Counter-Flow.jpg"
+<img src="{{'/assets/images/ENGRD-2210-Counter-Flow.jpg' | relative_url}}"
      style="display: block; width: 100%; margin: 2rem auto;">
 
+
 <h5> Method: </h5>
-Control Volume Analysis
+Since our system has mass entering and leaving, we need to use the Control Volume method for analyzing this system.
 
 <h5> Assumptions: </h5>
 1. Water in its liquid state is not highly sensitive to pressure and volume change. Therefore, we can model water in the system as **incompressible**.
