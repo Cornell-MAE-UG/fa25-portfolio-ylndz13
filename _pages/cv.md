@@ -1,6 +1,6 @@
 ---
 layout: default
-title: <Your Name> - Curriculum Vitae
+title: Yolanda Zhou - Curriculum Vitae
 permalink: /cv/
 ---
 ## Curriculum Vitae
@@ -8,19 +8,19 @@ permalink: /cv/
 [Download my CV]({{ "/assets/CV.pdf" | relative_url }}) in PDF format.
 
 
-**Email:** [netID@cornell.edu](mailto:netID@cornell.edu) | | | **Phone:** +123 456 7890
+**Email:** [xz886@cornell.edu](mailto:netID@cornell.edu) | | | **Phone:** +123 456 7890
 
 ---
 
 #### Objective
-Aspiring engineering student with a strong foundation in.... Passionate about ... and eager to apply my knowledge in real-world applications.
+Aspiring engineering student with a strong foundation in math and physics. Passionate about robotics and interdisciplinary design that utilizes mechanical, electrical, and programming experiences. Eager to apply my knowledge in real-world applications.
 
 ---
 
 #### Education
 - **Cornell University**  
   *Bachelor of Science in Mechanical and Aerospace Engineering*  
-  GPA: 3.8/4.0 | Graduation: Month, Year
+  GPA: 3.5/4.0 | Graduation: May, 2028
 
 - **[High School Name]**  
   *High School Diploma*  
@@ -29,9 +29,9 @@ Aspiring engineering student with a strong foundation in.... Passionate about ..
 ---
 
 #### Skills
-- **Software:** Autodesk Fusion 360, SolidWorks, ANSYS  
-- **Programming:** Python, MATLAB  
-- **Tools:** 3D Printing, Laser Cutting  
+- **Software:** Inventor, OnShape, RapidHarness, Altium, KiCAD
+- **Programming:** C++, Java, Python, MATLAB 
+- **Tools:** 3D Printing, Machining
 
 ---
 
