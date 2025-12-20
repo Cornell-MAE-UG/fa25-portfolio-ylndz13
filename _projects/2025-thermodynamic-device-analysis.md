@@ -199,4 +199,4 @@ Counter Flow, Low: <br>
 Hot channel: $\dot{Q} = - \dot{m} \frac{kg}{s} \cdot 4.184 \frac{kJ}{kgK} \cdot (298.45 - 318.75) K = -82.01 \frac{kJ}{s}$ <br>
 Cold channel: $\dot{Q} = - \dot{m} \frac{kg}{s} \cdot 4.184 \frac{kJ}{kgK} \cdot (306.55 - 286.95) K = 79.18 \frac{kJ}{s}$ <br>
 
-The data does support the previous hypothesis that putting the heat exchanger in counter flow improves the rate of heat transfer. 
+The data does support the previous hypothesis that putting the heat exchanger in counter flow improves the rate of heat transfer. This suggests that the counter flow setup is more efficient than the parallel flow setup at exchanging heat.
