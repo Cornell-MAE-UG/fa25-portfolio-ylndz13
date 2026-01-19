@@ -20,7 +20,7 @@ Aspiring engineering student with a strong foundation in math and physics. Passi
 #### Education
 - **Cornell University**  
   *Bachelor of Science in Mechanical and Aerospace Engineering*  
-  GPA: 3.5/4.0 | Graduation: May, 2028
+  GPA: 3.8/4.3 | Graduation: December, 2027
 
 - **[High School Name]**  
   *High School Diploma*  
