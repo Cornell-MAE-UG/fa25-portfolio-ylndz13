@@ -8,3 +8,51 @@ $color_scheme: '{{ site.color_scheme }}';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&display=swap');
 @import "custom";
 
+.YZ {
+  width: 200px;      /* pick a size you like */
+  height: auto;     /* keeps aspect ratio */
+}
+
+.project-image {
+  max-width: 900px;   /* increase this */
+  width: 100%;
+}
+
+.vertical-evolution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 1rem 0;
+}
+
+.vertical-evolution img {
+  width: 100%;
+  max-width: 900px;   /* THIS is what makes them big */
+  border-radius: 2px;
+}
+
+.arrow-down {
+  font-size: 3rem;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.two-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.two-images img {
+  width: 100%;
+  border-radius: 8px; /* match your portfolio style */
+}
+
+figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin-top: 0rem;
+}

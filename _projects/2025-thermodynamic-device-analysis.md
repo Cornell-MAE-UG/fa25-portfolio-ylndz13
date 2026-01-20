@@ -3,12 +3,9 @@ layout: project
 title: Thermodynamics Device Analysis (FA 2025)
 description: Heat Exchanger
 technologies: [Thermodynamics - Control Volme Analysis]
-# image: /assets/images/ENGRD-2210-Heat-Exchanger-Device-Analysis.png
+image: /assets/images/ENGRD-2210-Heat-Exchanger-Device-Analysis.png
 # image width: 100%
 ---
-<img src="{{ '/assets/images/ENGRD-2210-Heat-Exchanger-Device-Analysis.png' | relative_url }}"
-     style="display: block; width: 100%; margin: 2rem auto;">
-
 <style>
 h5 {
   margin-top: 4rem;
