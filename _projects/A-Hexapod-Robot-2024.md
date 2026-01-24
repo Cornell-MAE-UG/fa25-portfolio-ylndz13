@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Hexapod Robot
+title: Hexapod Robot (2026)
 description: Making a hexapod from scratch and learning about the electrical system and code...
 technologies: [Inverse Kinematics, Power regulator circuit, CAD, C++, PCB, Arduino]
 image: /assets/images/hexapod_v1_real.JPG

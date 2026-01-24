@@ -1,6 +1,6 @@
 ---
 layout: project
-title: FIRST Robot
+title: FIRST Robot (2024)
 description: Building an FRC robot
 technologies: [CAD, OnShape, CNC, Off-season]
 image: /assets/images/FRC_robot.png
