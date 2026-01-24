@@ -51,7 +51,7 @@ Fasteners were not added into the assembly as they make the browser incredibly s
 
 I initially set up the electrical circuitry according to other maker's suggestions online: using a 3S Lipo battery, a buck stepdown converter board with jumper wires to two Adafruit PCA9685 servo controllers, and 18 heavy duty MG996R servo motors. It turns out that the servo motors experience occasional voltage spikes or cutouts that could be a result of unstable connection or insufficient current supplied to the servos. Therefore, I designed a custom power distribution board consisted of two 8A MP2238GD-Z buck converter ICs and their relevant circuitry, distributing power from the lipo battery to the servo motors on the hexapod and powering the two Adafruit PCA 9685 servo drivers. To decide on the MP2238GD-Z, I took into consideration maximum current rating, power dissipation rating, manufacturer location, cost, and solderability. 
 
-Schematics:
+**Schematics**
 
   <img src="{{ '/assets/images/hex_sch.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
@@ -113,7 +113,7 @@ If the temperature rise is $30 ^\circ C$,
 
 So the trace width is $\frac{0.06879mm^2}{0.035mm}=1.9654mm$
 
-The slot in the copper pour is used to prevent the the noisy current from directly going to the connectors and forces the current to go through the decoupling capacitors, which reduces the noise in the power circuit. The performance of the board still needs to be tested and validated, as this is the first rev of the board. If there are still persistent overheating issues with the board's components, I may consider changing the board's thickness to 2oz copper instead.
+The slot in the copper pour is used to prevent the the noisy current from directly going to the connectors and forces the current to go through the decoupling capacitors, which reduces the noise in the power circuit. The performance of the board still needs to be tested and validated, as this is the first rev of the board. If there are still persistent overheating issues with the board's components, I plan to adjust the layot of the components on the 11.4V trace use a separate copper pour instead of a trace (last resort is changing the board's thickness to 2oz copper).
 
 The inductor is a noisy element in the circuit as its magnetic field can induce current in nearby traces. Therefore, it should be placed away from sensitive circuits like the feedback pin on the switching regulator IC. In the layout, we can see that the inductor is placed near the LED's circuitry, which is not a sensitive element to noise. 
 
@@ -123,7 +123,7 @@ More specific code can be found at my GitHub [repository](https://github.com/yln
 
 I first wrote the C++ code in the Arduino editor using the Servo.h library with hard-coded pwm values. The robot walked well, but I was limited to a narrow range of movement possibilities and could not interact with the robot. For the current version of the code (v2), I implemented interpolated inverse kinematics to control the robot's leg movements based on the position of the tip of the foot of each leg. In addition, I moved to the PlatformIO extension on VSCode for more comprehensive debugging and development functionalities. 
 
-<h5>Device Setup:</h5>
+**Device Setup:**
 
 <img src="{{ '/assets/images/device_setup.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
@@ -132,7 +132,7 @@ Each servo is of type `servoConfig`. The struct includes servo information like 
 
 The hexapod is abstracted as an instance of the `Robot` class. A `Robot` has 6 `Leg` objects, where 3 `servoConfig` is declared for the Coxa, Femur, and Tibia. The `Robot` class contains member functions that record and update the robot's position relative to where it was initialized. The `Leg` class's member functions calculate the destination coordinate based on Inverse Kinematics, interpolate the points on the path, and move the servos correspondingly.
 
-<h5> Inverse Kinematics: </h5>
+**Inverse Kinematics:**
 
 <img src="{{ '/assets/images/IK.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
@@ -144,13 +144,15 @@ The member function `calculateIK()` takes in two parameters: the robot's destina
 
 The calculation for `theta` is quite simple. An `atan2(target.y, x-y plane projected length of the leg)` call returns the value for `theta`, the angle between the current position of the hexapod's foot and the Coxa servo's `midVal`. For convenience of calculation, the variable `projectedLength` is declared to represent the x-y plane projected length of the leg.
 
-<img src="{{ '/assets/images/alpha_beta.jpeg' | relative_url }}"
+<img src="{{ '/assets/images/alpha_beta.jpg' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
 
 `alpha` is the angle between the midVal of the Femur motor and Femur of the leg. 
-\\[ \alpha^{\prime} = tan^{-1} \left(\frac{z}{pL}\right) = atan2(z,pL) \\]
 Law of Cosines gives:
 \\[b^2 = a^2 + c^2 - 2ac \cdot cos(\alpha + \alpha ^{\prime})\\]
+
+\\[ \alpha^{\prime} = tan^{-1} \left(\frac{z}{pL}\right) = atan2(z,pL) \\]
+
 \\[\alpha + \alpha ^{\prime} = cos^{-1} \left(\frac{a^2 + c^2 - b^2}{2ac}\right)\\]
 \\[\alpha = cos^{-1} \left(\frac{a^2 + c^2 - b^2}{2ac}\right) - atan2(z,pL)\\]
 
@@ -160,25 +162,36 @@ To calculate the projectedLength (`pL`) of the leg at the target location: `pL =
 
 \\[\beta = cos^{-1} \left( \frac{a^2 + b^2 - c^2}{2ab} \right)\\]
 
-<h5>IK Interpolation:</h5>
-Each foot tip's movement follows an interpolated Bezier curve. I plotted a Bezier curve with the one control point $p_1$'s projection at the midpoint onto the line from $p_0$ to $p_2$. From the reference frame of the body of the robot, the tip of the foot is always on the same 2D plane as the coxa. If the goal for the robot is to move from the tip of the robot's foot always moves along a plane that is parallel to vector $r_{A / B}$.
-
-Interpolating the results of the Inverse Kinematics calculations is fairly simple. I declared an array of type `Vector3` named `interpolation`. 
+**IK Bezier Curve &  Interpolation:**
 
 <img src="{{ '/assets/images/interpolate.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
 
-<h5>Code Testing:</h5>
+Each foot tip's movement follows an interpolated Bezier curve. I plotted a symmetric Bezier curve with the one control point with a height of $0.3$ of the total distance between the tip of the foot and the coordinate of the leg. The code moves along the line joining the current and target `x` and `y` coordinates. For the `z` coordinate, the following equation was used:
+
+\begin{aligned}
+f(x) &= (1-t)((1-t)(t\cdot 0.3l) + 0.3tl((1-t) + 0.3tl)) \\
+     &\quad + t((1-t)((1-t) 0.3l + 0.3tl) + t((1-t) 0.3l + t \cdot targetZ))
+\end{aligned}
+
+Where $l$ is the length from the leg's origin at the coxa to the tip of the foot. And targetZ is the z-coordinate of the target point the robot's foot will move to.
+
+Interpolating the results of the Inverse Kinematics calculations is fairly simple. I declared an array of type `Vector3` named `interpolation`. The interpolated points are added to an array `interpolation`. 
+
+**Code Testing:**
+
 I first tested the board without driving the servo motors to eliminate causing problems with the hardware. I traced the code through a series of print statements inside each function call and deployed the code on the Arduino Mega board. This method of testing turned out to be very helpful as I was able to debug a significant portion of my code without needing access to the physical hexapod. A large amount of print statements did cause the program to run slower than my expectation, so I had to adjust the amount of delay in the code after integrating the code with the robot. 
 
-I made a coordinate tracker based on the output of the program and compared the actual behavior to the expected behavior of the foot coordinates. This test ensured that the  
+I made a coordinate tracker based on the output of the program and compared the actual behavior to the expected behavior of the foot coordinates.
 
 To protect the servos from stalling due to bugs in the code, I limited the maximum turning angle of the servo to between $0^\circ$ and $180^\circ$
 
-<h5> Current Results:</h5>
+**Current Results:**
+
 The robot was able to move, but the servo positions displayed slight drifts in the values after each cycle. I am working on modifying the code to improve the accuracy of the motor.
 
-<h5> Work In Progress: </h5>
+**Work In Progress:**
+
 Now that I am equipped with formal C++ knowledge thanks to taking CS 2024, I plan to rework my code's data encapsulation and split the Movement.cpp file into the actual classes with proper header files. I also aim to declare the `servoConfig` virtual and declare `Coxa`, `Femur`, and `Tibia` classes to implement the virtual methods in `servoConfig` to reduce member function redundancy. 
 
 Once the power distribution PCB and its components arrive, I am going to bring up the board and test its functionalities (super exciting). 
