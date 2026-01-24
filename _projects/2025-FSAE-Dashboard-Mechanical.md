@@ -3,11 +3,11 @@ layout: project
 title: FSAE Dash Mechanical
 description: Integrating the Dash PCB to the rest of the car
 technologies: [Integration, Inventor, RapidHarness, Jig, Communication]
-image: /assets/images/spaceship-design.jpg
+image: /assets/images/dash_assembly.png
 ---
 
 
-In 2023, I oversaw the design of my high school's FIRST robotics team 3655 Gone Fishin'...
+
 
 [unfinished template]
 

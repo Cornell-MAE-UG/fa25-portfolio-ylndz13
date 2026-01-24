@@ -1,9 +1,9 @@
 ---
 layout: project
-title: Hexapod Robot
-description: Making a hexapod from scratch and learning about the electrical system and code...
-technologies: [Inverse Kinematics, Power regulator circuit, CAD, C++, PCB, Arduino]
-image: /assets/images/hexapod_v1_real.jpg
+title: FIRST Robot
+description: Building an FRC robot
+technologies: [CAD, OnShape, CNC, Off-season]
+image: /assets/images/FRC_robot.png
 ---
 
 In 2023, I oversaw the design of my high school's FIRST robotics team 3655 Gone Fishin'...
