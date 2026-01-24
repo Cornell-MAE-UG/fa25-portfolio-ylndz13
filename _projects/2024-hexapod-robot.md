@@ -3,7 +3,7 @@ layout: project
 title: Hexapod Robot
 description: Making a hexapod from scratch and learning about the electrical system and code...
 technologies: [Inverse Kinematics, Power regulator circuit, CAD, C++, PCB, Arduino]
-image: /assets/images/hexapod_v1_real.jpeg
+image: /assets/images/hexapod_v1_real.jpg
 ---
 
 <script>
@@ -43,7 +43,18 @@ My initial thought with the assembly of the hexapod was to bolt the components t
   <figcaption>Hexapod design rev 2</figcaption>
 </div>
 
-The new design thickens the joints, avoiding the need of using as many heated inserts and improving the printing accuracy. I also redesigned the bearing holder and changed its printing method to horizontal. As a short test of validation for the design, I ran some FEA simulations in ANSYS to make sure that the newly designed parts are able to withstand normal stress and potential torsion when the robot moves. I am working on modeling anisotropic (direction-dependent) 3D printed material properties in ANSYS FEA simulations.
+The new design thickens the joints, avoiding the need of using as many heated inserts and improving the printing accuracy. I also redesigned the bearing holder and changed its printing method to horizontal. As a short test of validation for the design, I ran some FEA simulations in ANSYS to make sure that the newly designed parts are able to withstand normal stress and potential torsion when the robot moves. 
+
+<div class="two-images">
+  <img src="{{ '/assets/images/bearing_holder_cad.png' | relative_url }}"
+     style="display: block; width: 100%; margin: 0rem auto;">
+
+  <img src="{{ '/assets/images/bearing_holder_slicer.png' | relative_url }}"
+     style="display: block; width: 100%; margin: 0rem auto;">
+</div>
+<figcaption>Improved bearing holder in CAD and in 3D printing slicer</figcaption>
+
+Intuitively, the new printing orientation should not be as breakable as the previous, upright print orientation. I am working on modeling anisotropic (direction-dependent) 3D printed material properties in ANSYS FEA simulations.
 
 Fasteners were not added into the assembly as they make the browser incredibly slow.
 
@@ -169,14 +180,15 @@ To calculate the projectedLength (`pL`) of the leg at the target location: `pL =
 
 Each foot tip's movement follows an interpolated Bezier curve. I plotted a symmetric Bezier curve with the one control point with a height of $0.3$ of the total distance between the tip of the foot and the coordinate of the leg. The code moves along the line joining the current and target `x` and `y` coordinates. For the `z` coordinate, the following equation was used:
 
-\begin{aligned}
-f(x) &= (1-t)((1-t)(t\cdot 0.3l) + 0.3tl((1-t) + 0.3tl)) \\
-     &\quad + t((1-t)((1-t) 0.3l + 0.3tl) + t((1-t) 0.3l + t \cdot targetZ))
+$$\begin{aligned}
+&(1-t)((1-t)(0.3tl) + 0.3tl((1-t) + 0.3tl)) \\
+     &\quad + 0.3tl((1-t)((1-t) + 0.3tl) + 0.3tl((1-t) + t \cdot targetZ))
 \end{aligned}
+$$
 
 Where $l$ is the length from the leg's origin at the coxa to the tip of the foot. And targetZ is the z-coordinate of the target point the robot's foot will move to.
 
-Interpolating the results of the Inverse Kinematics calculations is fairly simple. I declared an array of type `Vector3` named `interpolation`. The interpolated points are added to an array `interpolation`. 
+Interpolating the results of the Inverse Kinematics calculations is fairly simple. I declared an array of type `Vector3` named `interpolation`. The interpolated points are added to an array `interpolation`. The result of the interpolation is a series of points that the robot's foot can follow to proceed to the target position. To actually advance moving the robot, the code simply interpolates the straight line connecting the target coordinate with the zero coordinate and carry out the necessary movements.
 
 **Code Testing:**
 
