@@ -1,8 +1,8 @@
 ---
 layout: project
-title: FIRST robot
-description: A robot I designed
-technologies: [OnShape]
+title: FSAE Dash Mechanical
+description: Integrating the Dash PCB to the rest of the car
+technologies: [Integration, Inventor, RapidHarness, Jig, Communication]
 image: /assets/images/spaceship-design.jpg
 ---
 
