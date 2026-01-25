@@ -16,6 +16,16 @@ image: /assets/images/hexapod_v1_real.JPG
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
 
+Overview:
+
+• Designed robot in CAD
+• 3D printed components
+• Iterated on previous design
+• Ran FEA in ANSYS
+• Designed custom power distributing PCB (thermal and electrical considerations)
+• About to assemble and test PCB
+• Wrote custom Inverse Kinematics code to control the robot in C++
+
 I began building a personal hexapod robot project in the summer of 2024.
 
 This project started out as an endeavor to learn about working with Arduino microcontrollers and setting up electrical components. I started out with a very simple idea for the hexapod in CAD, then followed YouTube videos of other makers' hexapod projects and took inspiration from commercially-available hexapod designs to flesh out the design.
