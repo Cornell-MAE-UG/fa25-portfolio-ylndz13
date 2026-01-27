@@ -16,15 +16,15 @@ image: /assets/images/hexapod_v1_real.JPG
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
 
-Overview:
+<h5> Overview:</h5>
 
-• Designed robot in CAD
-• 3D printed components
-• Iterated on previous design
-• Ran FEA in ANSYS
-• Designed custom power distributing PCB (thermal and electrical considerations)
-• About to assemble and test PCB
-• Wrote custom Inverse Kinematics code to control the robot in C++
+• Designed robot in CAD \\
+• 3D printed components \\
+• Iterated on previous design \\
+• Ran FEA in ANSYS \\
+• Designed custom power distributing PCB (thermal and electrical considerations) \\
+• About to assemble and test PCB \\
+• Wrote custom Inverse Kinematics code to control the robot in C++ 
 
 I began building a personal hexapod robot project in the summer of 2024.
 
@@ -103,7 +103,7 @@ The maximum current through the switching regulator is 8A. The inductor's maximu
 
 **Buck Converter Voltage Divider Resistors:**
 
-The values for $R39$ is given by the equation $\frac{R38}{\frac{V_{OUT}}{0.6 V}-1}$. The datasheet suggested a $100 \; k\Omega$ resistor for the an output of 5V. Assuming that $R38 = 100 \; k\Omega$, Plugging in the conditions for this circuit yields $R39 = \frac{100 \; k\Omega}{\frac{V_{OUT}}{0.6 V}-1}=12.244 \; k\Omega$. Therefore, I picked $12.3 \; k\Omega$ resistors for $R39$ and $R45$.
+The values for $R_{39}$ is given by the equation $\frac{R_{38}}{\frac{V_{OUT}}{0.6 V}-1}$. The datasheet suggested a $100 \; k\Omega$ resistor for the an output of 5V. Assuming that $R_{38} = 100 \; k\Omega$, Plugging in the conditions for this circuit yields $R_{39} = \frac{100 \; k\Omega}{\frac{V_{OUT}}{0.6 V}-1}=12.244 \; k\Omega$. Therefore, I picked $12.3 \; k\Omega$ resistors for $R_{39}$ and $R_{45}$.
 
 **Layout:**
 

@@ -6,14 +6,14 @@ technologies: [Integration, Inventor, RapidHarness, Jig, Communication]
 image: /assets/images/dash_assembly.png
 ---
 
-Overview:
+<h5> Overview:</h5>
 
-• Integration-heavy
-• Designed in CAD
-• Constant communication with other subteams --- Ergonomics, Monocoque, Firmware / Low Voltage
-• Improved on past years' designs
-• Planned & manufactured dash harness using on RapidHarness
-• Created jigs for drilling into the monocoque
+• Integration-heavy \\
+• Designed in CAD \\ 
+• Constant communication with other subteams --- Ergonomics, Monocoque, Firmware / Low Voltage \\
+• Improved on past years' designs \\
+• Planned & manufactured dash harness using on RapidHarness \\
+• Created jigs for drilling into the monocoque \\
 • 3D printed waterproof enclosures to integrate dashboard screen & PCB 
 
 [unfinished template]
