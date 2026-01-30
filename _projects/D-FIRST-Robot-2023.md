@@ -15,3 +15,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec accumsan leo. Pe
 
 Aenean tincidunt aliquam arcu, in euismod dui dapibus eu. In placerat, mi et ultrices consequat, quam ligula cursus mauris, in semper neque nibh at est. Maecenas hendrerit dignissim porta. Phasellus nec fringilla dolor. Etiam efficitur nisi sit amet velit pharetra feugiat. Etiam ultrices turpis at leo semper, eleifend scelerisque neque malesuada. Aliquam molestie congue rhoncus. Donec blandit neque dolor, nec tristique mi pretium ac. Mauris tincidunt ullamcorper magna, nec pellentesque mi sagittis quis.
 
+
+<img src="{{ '/assets/images/3dprinted_gears.JPG' | relative_url }}"
+     style="display: block; width: 100%; margin: 0rem auto;">
+
+<img src="{{ '/assets/images/cnc_machine.JPG' | relative_url }}"
+     style="display: block; width: 100%; margin: 0rem auto;">
+
+<img src="{{ '/assets/images/cnc-ed_plate.JPG' | relative_url }}"
+     style="display: block; width: 100%; margin: 0rem auto;">
+
+<img src="{{ '/assets/images/machining.jpg' | relative_url }}"
+     style="display: block; width: 100%; margin: 0rem auto;">
+
+<img src="{{ '/assets/images/robot_2022.jpg' | relative_url }}"
+     style="display: block; width: 100%; margin: 0rem auto;">
