@@ -18,7 +18,7 @@ image: /assets/images/dash_assembly.png
 
 The purpose of the dashboard is to display crucial information to the driver and people working on the car. The purpose of the dashboard on the 2026 car is to house the Dash PCB & screen, providing necessary electrical connections and a waterproof enclosure. In addition, Dash Mechanical displays drive-critical faults to drivers and holds the Estops & startup button. My part works closely around other parts, such as the dashboard screen and PCB, the monocoque (body of the car), and the low voltage harness. I also designed the mounting structure for the roll hoop estops this year.
 
-Mechanical:
+<h5> Mechanical Enclosure: </h5>
 <img src="{{ '/assets/images/enclosure_stackup.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
 
@@ -31,7 +31,7 @@ The waterproofing is achieved by countersinking the screen lid and using gaskets
 3. A gasket between the PCB enclosure and the monocoque. 
 
 
-Integration
+<h5> Integration</h5>
 
 <div class = "two-images"> 
 <img src="{{ '/assets/images/integration_monocoque.png' | relative_url }}"
@@ -40,53 +40,49 @@ Integration
      style="display: block; width: 100%; margin: 0rem auto;">
 </div>
 
-
-
-
-
-
 The screen lid sandwiches the monocoque’s dashboard panel in the middle with the PCB enclosure. 4x M3 35mm flat head hex key bolts are used to connect to the heat-set inserts on the PCB enclosure. A gasket goes on either side of the dashboard panel for waterproofing purposes. Precision is needed for heat-set inserts so the bolt and insert threads align during installation. The fault lights and the startup button will be bonded to the monocoque after the holes for the fault lights are drilled.
 
+The PCB enclosure will undergo slight modifications to ensure fitment inside the monocoque (work in progress).
 
-<div class = "three-images"> 
+<h5>Estop Mounts:</h5>
+<div class = "two-images"> 
 <img src="{{ '/assets/images/estop_integration.png' | relative_url }}"
-     style="display: block; width: 60%; margin: 0rem auto;">
-<img src="{{ '/assets/images/rapidharness_schematic.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
-<img src="{{ '/assets/images/lv_harness_integration.png' | relative_url }}"
+<img src="{{ '/assets/images/estop_jig_on_car.JPG' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
 </div>
+<figcaption>Estop mount on the car (right: after welded on car using jig)</figcaption>
+
 
 The roll hoop estops will be welded onto the estop through mounting plates. The mounting plates are 0.125-inch-thick 4130 steel plates.
 
-Electrical Harnessing:
-<div class = "two-images"> 
+<h5>Electrical Harnessing:</h5>
+
+The harnessing connections underwent a series of changes throughout the design season as sensors were adjusted. 
+
 <img src="{{ '/assets/images/dash_harness_from_altium.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
+
 <img src="{{ '/assets/images/rapidharness_schematic.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
-</div>
-<figcaption>Dash Mechanical’s harnessing schematic in Altium and RapidHarness</figcaption>
 
-
-
-<img src="{{ '/assets/images/dash_back.png' | relative_url }}"
-     style="display: block; width: 100%; margin: 0rem auto;">
-
-
-<img src="{{ '/assets/images/dash_harness_real.JPG' | relative_url }}"
-     style="display: block; width: 100%; margin: 0rem auto;">
-
-
+<div class = "two-images"> 
 <img src="{{ '/assets/images/rapidharness_page1.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
-
 <img src="{{ '/assets/images/rapidharness_page2.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
+ </div>
+The harnessing connections to the fault lights and buttons were designed in RapidHarness and manufactured by me based on the dimensions in RapidHarness. 
+
+<img src="{{ '/assets/images/dash_harness_real.JPG' | relative_url }}"
+     style="display: block; width: 80%; margin: 0rem auto;">
+
+This is a photo of the dashboard harness after I manufactured it. The wires are bundled, wrapped in black overwraps, and taped with Scotch 69 tape to protect the wires from accidental damage. 
 
 
-
+<h5>Bill of Materials</h5>
 
 <img src="{{ '/assets/images/components.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
 
+Some more thought went behind the selection for the button, as according to last year, the startup button got jammed after someone pressed it too hard, so this year I looked for IK10 (maximum spring force rating) in addition to the waterproof rating.

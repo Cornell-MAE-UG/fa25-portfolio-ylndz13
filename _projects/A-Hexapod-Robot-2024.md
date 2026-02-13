@@ -138,6 +138,18 @@ The slot in the copper pour is used to prevent the the noisy current from direct
 
 The inductor is a noisy element in the circuit as its magnetic field can induce current in nearby traces. Therefore, it should be placed away from sensitive circuits like the feedback pin on the switching regulator IC. In the layout, we can see that the inductor is placed near the LED's circuitry, which is not a sensitive element to noise. 
 
+The board being assembled:
+<div class="two-images">
+  <img src="{{ '/assets/images/board_cooking.JPG' | relative_url }}"
+     style="display: block; width: 100%; margin: 0rem auto;">
+
+  <img src="{{ '/assets/images/board_done_cooking.JPG' | relative_url }}"
+     style="display: block; width: 100%; margin: 0rem auto;">
+</div>
+<figcaption>Power distribution SMD Assembly</figcaption>
+
+I am currently continuity testing the soldered board to ensure each pin of the components makes a valid electrical connection before I solder the through hole connectors, as having through holes make using a hotplate for reflowing difficult. 
+
 <h5> Code: </h5>
 
 More specific code can be found at my GitHub [repository](https://github.com/ylndz13/HexapodCode): 
