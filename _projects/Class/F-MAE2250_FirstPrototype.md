@@ -1,8 +1,9 @@
 ---
 layout: project
-title: MAE 2250 Client Outline
-description: Dealing with Spotted Lantern Flies
-technologies: [Communication, Teamwork, CAD]
+title: MAE 2250 First Prototype
+description: Solving the Spotted Lantern Fly Problem
+permalink: projects/MAE2250/first-prototype
+technologies: [Communication, Teamwork, CAD, Building, BOM]
 # image: /assets/images/Competition Robot CAD.png
 ---
 ### The Lanternfly Terminator 
