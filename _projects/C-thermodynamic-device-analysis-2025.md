@@ -5,6 +5,7 @@ description: Heat Exchanger
 technologies: [Thermodynamics - Control Volme Analysis]
 image: /assets/images/ENGRD-2210-Heat-Exchanger-Device-Analysis.png
 # image width: 100%
+folder: project
 ---
 <style>
 h5 {

@@ -2,9 +2,10 @@
 layout: project
 title: MAE 2250 First Prototype
 description: Solving the Spotted Lantern Fly Problem
-permalink: projects/MAE2250/first-prototype
+permalink: /projects/MAE2250/functional-prototype/
 technologies: [Communication, Teamwork, CAD, Building, BOM]
-# image: /assets/images/Competition Robot CAD.png
+folder: MAE2250
+image: /assets/images/2250_first_prototype_cad.png
 ---
 ### The Lanternfly Terminator 
 **Team Bug-anators**

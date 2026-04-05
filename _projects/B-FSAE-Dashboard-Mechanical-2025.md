@@ -4,6 +4,7 @@ title: FSAE Dash Mechanical (2025)
 description: Integrating the Dash PCB to the rest of the car
 technologies: [Integration, Inventor, RapidHarness, Jig, Communication]
 image: /assets/images/dash_assembly.png
+folder: project
 ---
 
 <h5> Overview:</h5>

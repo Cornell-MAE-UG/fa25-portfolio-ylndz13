@@ -56,3 +56,38 @@ figcaption {
   color: #ffffff;
   margin-top: 0rem;
 }
+
+.child-projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.child-project-card {
+  display: block;
+  width: 200px;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.child-project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.child-project-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+}
+
+.child-project-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 10px;
+}

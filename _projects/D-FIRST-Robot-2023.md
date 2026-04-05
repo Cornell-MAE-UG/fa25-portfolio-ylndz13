@@ -4,6 +4,7 @@ title: FIRST Robot (2024)
 description: Building an FRC robot
 technologies: [CAD, OnShape, CNC, Off-season]
 image: /assets/images/Competition Robot CAD.png
+folder: project
 ---
 
 In 2023, I oversaw the design of my high school's FIRST robotics team 3655 Gone Fishin'.

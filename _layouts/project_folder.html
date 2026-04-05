@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<h2> {{page.path | split: '/' | slice: 1,2 | first}} </h2>
+
+
+<div class="child-projects">
+  {% for file in site.projects %}
+    {% if file.folder == page.folder and file.url != page.url %}
+      <a href="{{ file.url | relative_url }}" class="child-project-card">
+        <h3>{{ file.title }}</h3>
+        {% if file.image %}
+          <img src="{{ file.image | relative_url }}" alt="{{ file.title }}">
+        {% endif %}
+      </a>
+    {% endif %}
+  {% endfor %}
+</div>
+
+
+<!-- <div class="child-projects">
+
+</ul>
+  {% assign current_folder = page.path | split: '/' | slice: 1,2 | first %}
+  {% for file in site.projects %}
+    {% assign file_folder = file.path | split: '/' | slice: 1,2 | first %}
+    {% if file_folder == current_folder and file.url != page.url %}
+      <a href="{{ file.url | relative_url }}" class="child-project-card">
+        <h3>{{ file.title }}</h3>
+        {% if file.image %}
+          <img src="{{ file.image | relative_url }}" alt="{{ file.title }}">
+        {% endif %}
+      </a>
+    {% endif %}
+  {% endfor %}
+</div> -->
