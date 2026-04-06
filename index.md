@@ -6,7 +6,7 @@ title: <Your Name>
 ## About Me
 
 
-![Profile Picture]({{ "assets/images/YZ.jpeg" | relative_url }}){: class="YZ"}
+![Profile Picture]({{ "assets/images/YZ.JPEG" | relative_url }}){: class="YZ"}
 
  
 Hi! My name is Xinyuan (Yolanda) Zhou, a sophomore at Cornell University pursuing a major in Mechanical and Aerospace Engineering and potentially double minors in Electrical and Computer Engineering and Computer Science.
