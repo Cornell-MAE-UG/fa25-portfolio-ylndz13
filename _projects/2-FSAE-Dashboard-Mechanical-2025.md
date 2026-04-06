@@ -5,6 +5,7 @@ description: Integrating the Dash PCB to the rest of the car
 technologies: [Integration, Inventor, RapidHarness, Jig, Communication]
 image: /assets/images/dash_assembly.png
 folder: project
+in_main: true
 ---
 
 <h5> Overview:</h5>

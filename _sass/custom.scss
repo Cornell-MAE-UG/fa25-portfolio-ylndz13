@@ -177,7 +177,8 @@ footer {
 }
 
 .gallery-item:hover {
-  transform: scale(1.05); 
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .project-image {

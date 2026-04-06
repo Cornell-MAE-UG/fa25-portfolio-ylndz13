@@ -1,11 +1,12 @@
 ---
 layout: project
-title: Thermodynamics Device Analysis (FA 2025)
+title: MAE 2210 Thermodynamics -- Device Analysis (FA 2025)
 description: Heat Exchanger
 technologies: [Thermodynamics - Control Volme Analysis]
 image: /assets/images/ENGRD-2210-Heat-Exchanger-Device-Analysis.png
 # image width: 100%
 folder: project
+in_main: true
 ---
 <style>
 h5 {

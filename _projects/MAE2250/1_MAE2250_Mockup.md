@@ -6,6 +6,7 @@ permalink: /projects/MAE2250/client-outline/
 technologies: [Communication, Teamwork, CAD]
 folder: MAE2250
 # image: /assets/images/2250_first_prototype_cad.png
+in_main: false
 ---
 
 ### The Lanternfly Terminator 

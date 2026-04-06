@@ -1,9 +1,10 @@
 ---
 layout: project_folder
-title: MAE 2250 Table of Contents
+title: MAE 2250 Folder (SP 2026)
 permalink: /projects/MAE2250/
 image: /assets/images/2250_first_prototype_cad.png
 folder: MAE2250
+in_main: true
 ---
 Check out:
 - our group's pitch to the Cornell CALS clients: [Client Pitch]({{ '/projects/MAE2250/client-outline/' | relative_url }})
