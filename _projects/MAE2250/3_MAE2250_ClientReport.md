@@ -176,62 +176,77 @@ By later cycles, multiple fasteners required retightening
 <table class = "spaced-table" style = "margin: 0 auto; text-align: center">
      <colgroup>
           <col style="width: 140px">
-          <col style="width: 270px">
           <col style="width: 150px">
-          <col style="width: 150px">
-          <col style="width: 150px">
+          <col style="width: 100px">
+          <col style="width: 100px">
+          <col style="width: 500px">
      </colgroup>
      <thead>
      <tr>
           <th>Part Name</th>
-          <th>Description</th>
-          <th>Material</th>
-          <th>Source (McMaster Code or Amazon link)</th>
-          <th>Fabrication Method</th>
+          <th>Part Number</th>
+          <th>Quantity</th>
+          <th>Cost</th>
+          <th>Justification</th>
      </tr>
      </thead>
      <tbody>
      <tr>
-          <td> <b> T-Slotted Framing Rail </b> </td>
-          <td> Single four-slot rail, 1" × 1", length = 6 ft </td>
-          <td> Aluminum </td>
-          <td> McMaster 47065T101 </td>
-          <td> Purchased & used </td>
+          <td> <b> Collapsible Gates (Amazon) </b> </td>
+          <td> B08L5FQYHS </td>
+          <td> 2 </td>
+          <td> $46 </td>
+          <td> This part is mainly for the expandable and collapsible portion of the shaft, which is essential for the top-most portion of our design. It is also not on McMaster, where we are only able to source it from Amazon. </td>
      </tr>
      <tr>
-          <td> <b> Aluminum U-Channel </b> </td>
-          <td> 6063 aluminum, 1/16" wall, 3/8" × 5/8", length = 4 ft </td>
-          <td> Aluminum </td>
-          <td> McMaster 9001K787 </td>
-          <td> Purchased & used </td>
+          <td> <b> Mesh (Amazon) </b> </td>
+          <td> B087RSWLY8 </td>
+          <td> 1 </td>
+          <td> $8 </td>
+          <td> A mesh is also an important part of our design. It acts as the main protective layer against SLFs. However, McMaster only has extremely heavy meshes, which are not structurally good for our design purposes. We are also not able to make this in the TDS or by machining any parts, so the only way is to buy it from Amazon.  </td>
      </tr>
      <tr>
-          <td> <b> Garden Mesh Netting </b> </td>
-          <td> 4' × 10' fine bug netting for pest protection </td>
-          <td> Polymer mesh </td>
-          <td> mesh </td>
-          <td> Purchased but not used bc didn’t arrive on time </td>
+          <td> <b> Wheels (Amazon) </b> </td>
+          <td> B0FLX9WQBH </td>
+          <td> 2 </td>
+          <td> $37.16 </td>
+          <td> This part is used for the rolling motion of the mesh and structural components. Wheels from McMaster are incredibly expensive, which makes buying wheels from Amazon the only realistic option for our team. </td>
      </tr>
      <tr>
-          <td> <b> Expandable Coat Rack (Wall Hanger) </b> </td>
-          <td> Wooden expandable peg rack, 14 hooks </td>
-          <td> Wood </td>
-          <td> l brackets  </td>
-          <td> Purchased but not used bc didn’t arrive on time </td>
+          <td> <b> Motor (Amazon) </b> </td>
+          <td> WB089GTHGPZ </td>
+          <td> 2 </td>
+          <td> $30  </td>
+          <td> This part is used for electrically powering our wheels. This allows us to automate our system. Motors from McMaster are incredibly clunky, heavy, costly, and the specs are too high for our use case. Amazon was the only reasonably priced option. </td>
      </tr>
      <tr>
-          <td> <b> DC Gear Motor  </b> </td>
-          <td> 12V, 10 RPM high torque geared motor, 37 mm shaft </td>
-          <td> Metal/plastic  </td>
-          <td> motor  </td>
-          <td> Purchased but not used bc didn’t arrive on time </td>
+          <td> <b> 80/20 extrusions (McMaster)  </b> </td>
+          <td> 47065T101 </td>
+          <td> 2  </td>
+          <td> $66.50  </td>
+          <td> 6 ft each </td>
      </tr>
      <tr>
-          <td> <b> Corner Brackets (Set) </b> </td>
-          <td> 2020 aluminum extrusion L-brackets with M5 bolts/nuts </td>
-          <td> Aluminum </td>
-          <td> corner brackets  </td>
-          <td> Purchased but not used bc didn’t arrive on time </td>
+          <td> <b> U channels (McMaster) </b> </td>
+          <td> 9001K787 </td>
+          <td> 2 </td>
+          <td> $17.48  </td>
+          <td> 4 ft each </td>
+     </tr>
+     <tr>
+          <td> <b> L brackets + more nuts (Amazon) </b> </td>
+          <td> B0855V2JV3 </td>
+          <td> 1 </td>
+          <td> $18  </td>
+          <td> These L brackets are for securing our frames together. These brackets could be found on McMaster, but McMaster charges $8 for each bracket, which is ludicrously overpriced and would put us over budget. </td>
      </tr>
      </tbody>
 </table>
+
+Totals: $233
+
+<h3>Work Cited:</h3>
+<ol>
+     <li>Bekelja, K. M. (2026). NY grapes and the spotted lanternfly problem. Cornell Integrated Pest Management</li>
+     <li>Phillips-Russo, J. (2026). Spotted lanternfly mechanical harvester study. Lake Erie Regional Grape Program</li>
+</ol>
