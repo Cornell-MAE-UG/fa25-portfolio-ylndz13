@@ -11,6 +11,8 @@ Check out:
 
 - our first prototype: [Functional Prototype]({{ '/projects/MAE2250/functional-prototype/' | relative_url }})
 
+- our client report: [Client Report]({{ '/projects/MAE2250/client-report/' | relative_url }})
+
 <!-- <h1>{{ page.title }}</h1>
 {% if page.image %}
 <img src="{{ page.image }}" alt="{{ page.title }}" style="max-width:300px; margin-bottom:20px;">
