@@ -1,0 +1,260 @@
+/* ============================
+   Timeline
+============================ */
+
+.timeline {
+    position: relative;
+    width: min(1200px, 95%);
+    margin: 60px auto;
+    padding: 40px 0;
+}
+
+/* center line */
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: #444;
+}
+
+/* each project */
+
+.timeline-item {
+    position: relative;
+    width: 540px;
+    margin-bottom: 80px;
+}
+
+/* alternate */
+
+.timeline-item.left {
+    left: calc(50% - 540px);
+    padding-right: 50px;
+    
+    margin-top: -50px;
+}
+
+.timeline-item.right {
+    left: 50%;
+    padding-left: 50px;
+
+    margin-top: -140px;
+}
+
+/* timeline dot */
+.timeline-dot {
+    position: absolute;
+    top: 45%;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+    background: #6d95d6;
+
+    box-shadow:
+        0 0 0 7px #08111f,   /* page background */
+        0 0 0 10px #8a93a5;  /* blue ring */
+
+    z-index: 20;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: #8a93a5;
+}
+
+// .timeline-dot::before {
+//     bottom: 100%;
+//     height: 100px;   /* adjust */
+// }
+
+// .timeline-dot::after {
+//     top: 100%;
+//     height: 100px;   /* adjust */
+// }
+
+.timeline-item.left .timeline-dot {
+    right: -9px;
+}
+
+.timeline-item.right .timeline-dot {
+    left: -9px;
+}
+
+.projects-page {
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+}
+
+/* ============================
+   Card
+============================ */
+
+.timeline-card {
+
+    display: flex;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    background: #1D212B;
+
+    border-radius: 18px;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    color: white;
+
+    transition: all .25s ease;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+
+}
+
+.timeline-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 50px rgba(0,0,0,.5);
+
+}
+
+/* image */
+
+.timeline-card img {
+
+    width: 180px;
+
+    height: 180px;
+    flex-shrink: 0;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+/* text */
+
+.timeline-content {
+
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: break-word;
+    padding: 24px;
+
+}
+
+.timeline-date {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #73A3DA;
+    font-weight: 600;
+}
+
+.timeline-content h2 {
+
+    font-family: 'Montserrat', sans-serif;
+    margin: .5rem 0;
+    font-weight: 400;
+    font-size: 1.7rem;
+
+}
+
+.timeline-content p {
+
+    font-size: 0.9rem;
+    color: #d0d0d0;
+    font-weight: 300;
+    line-height: 1.6;
+
+}
+
+.timeline-subtitle {
+
+    color: #7aa2ff;
+
+    font-weight: 600;
+
+    margin-top: 8px;
+
+    margin-bottom: 18px;
+
+}
+
+.timeline-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 18px;
+
+}
+
+.timeline-tag {
+
+    padding: 2px 8px;
+
+    border-radius: 6px;
+
+    border: 1px solid #5B8CEA;
+
+    color: #90B2D8;
+
+    font-size: .8rem;
+
+}
+
+/* ============================
+   Mobile
+============================ */
+
+@media (max-width: 100px) {
+
+.timeline::before {
+
+    left: 20px;
+
+}
+
+.timeline-item {
+
+    width: 50%;
+
+    left: 0 !important;
+
+    padding-left: 60px;
+
+    padding-right: 0;
+
+}
+
+.timeline-dot {
+
+    left: 11px !important;
+
+}
+
+}

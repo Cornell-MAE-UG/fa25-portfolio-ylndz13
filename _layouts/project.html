@@ -2,14 +2,261 @@
 layout: default
 ---
 
-<h1>{{ page.title }}</h1>
+<div class="project-page">
 
-<p><img src="{{ page.image | relative_url }}" alt="{{ page.imagealt }}" class="project-image" /></p>
+    <!-- ================= Hero ================= -->
 
-{{ content }}
+    <section class="project-hero">
 
-<p><strong>Technologies Used</strong>: {{ page.technologies | join: ", " }}</p>
+        <div class="hero-text">
 
-<a href={{ "/projects/" | relative_url }} class="back-arrow">
-    <i class="bi bi-arrow-left-circle-fill"></i> Back to Projects
-</a>
+            <a class="back-link" href="{{ '/projects/' | relative_url }}">
+                <i class="bi bi-chevron-left"></i>
+                Back to Projects
+            </a>
+
+            <h1>{{ page.title }}</h1>
+
+            <div class="hero-meta">
+
+                <span>{{ page.timeline }}</span>
+
+                <span>•</span>
+
+                <span>{{ page.role }}</span>
+
+            </div>
+
+            <p class="hero-summary">
+
+                {{ page.summary }}
+
+            </p>
+
+            <div class="hero-tags">
+
+                {% for tag in page.tags %}
+
+                <span class="timeline-tag">
+
+                    {{ tag }}
+
+                </span>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="{{ page.hero | relative_url }}">
+
+        </div>
+
+    </section>
+
+    <!-- ================= Quick Facts ================= -->
+
+    <section class="quick-facts">
+
+        <div>
+            <i class="bi bi-calendar3 quick-icon"></i>
+            <h4>Duration</h4>
+            <p>{{ page.timeline }}</p>
+        </div>
+
+        <div>
+            <i class="bi bi-person quick-icon"></i>
+            <h4>Role</h4>
+            <p>{{ page.role }}</p>
+        </div>
+
+        <div>
+            <i class="bi bi-flag quick-icon"></i>
+            <h4>Status</h4>
+            <p>{{ page.status }}</p>
+        </div>
+
+        <div>
+            <i class="bi bi-cpu quick-icon"></i>
+            <h4>Platform</h4>
+            <p>{{ page.platform }}</p>
+        </div>
+
+        <div>
+            <i class="bi bi-code-slash quick-icon"></i>
+            <h4>Languages</h4>
+            <p>{{ page.languages }}</p>
+        </div>
+
+    </section>
+
+    <!-- ================= Overview ================= -->
+
+    <section class="two-column">
+
+        <div class="overview">
+
+            <h2>Overview</h2>
+
+                <p>{{ page.overview }}</p>
+                
+        </div>
+
+        <div class="contributions">
+
+            <h2>Key Contributions</h2>
+
+            <ul>
+
+                {% for item in page.contributions %}
+
+                <li>{{ item }}</li>
+
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- ================= Engineering Journey ================= -->
+
+    <section>
+
+        <h2>Engineering Journey</h2>
+
+        <div class="journey">
+
+            {% for step in page.journey %}
+
+            <div class="journey-card">
+
+                <img src="{{ step.image | relative_url }}">
+
+                <h3>{{ step.title }}</h3>
+
+                <p>{{ step.description }}</p>
+
+                <small>{{ step.date }}</small>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+    <!-- ================= Challenges ================= -->
+
+    <section class="challenge-tech">
+
+        <div class="technical-challenges">
+
+            <h2>Technical Challenges</h2>
+
+            {% for c in page.challenges %}
+
+            <!-- <div class="challenge-arrow">
+
+                <i class="bi bi-arrow-right"></i>
+
+            </div> -->
+
+            <div class="challenge-row">
+                <div class="challenge-icon">
+                    <i class="bi {{ c.icon }}"></i>
+                </div>
+
+                <div class="challenge-problem">
+                    <h3>{{ c.title }}</h3>
+                    <p>{{ c.problem }}</p>
+                </div>
+
+                <div class="challenge-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                </div>
+
+                <div class="challenge-solution">
+                    <span>Solution</span>
+                    <p>{{ c.solution }}</p>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+        <div class="technology-panel">
+
+            <h2>Technologies Used</h2>
+
+            <div class="tech-grid">
+
+                {% for tech in page.technologies %}
+
+                <div class="tech-card">
+
+                    <div class="tech-icon">
+                        <i class="bi {{ tech.icon }}"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>{{ tech.name }}</strong>
+
+                        <p>{{ tech.description }}</p>
+
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    </section>
+
+    <!-- ================= Gallery ================= -->
+
+    <section>
+
+        <h2>Gallery</h2>
+
+        <div class="gallery">
+
+            {% for image in page.gallery %}
+
+            <img src="{{ image | relative_url }}">
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+    <!-- ================= Lessons ================= -->
+
+    <section>
+
+        <h2>Engineering Insights</h2>
+
+        <ul>
+
+            {% for lesson in page.lessons %}
+
+            <li>{{ lesson }}</li>
+
+            {% endfor %}
+
+        </ul>
+
+    </section>
+
+</div>

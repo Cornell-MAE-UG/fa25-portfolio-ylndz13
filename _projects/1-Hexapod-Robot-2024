@@ -1,0 +1,154 @@
+---
+layout: project
+
+title: Hexapod Robot
+
+subtitle: Robotics • Embedded Systems • Custom Electronics • Perception 
+
+timeline: June 2024 – Present
+
+role: Project owner
+
+description: Making a hexapod from scratch and learning about the electrical system and code...
+
+technologies: [Inverse Kinematics, Power PCB, Perception, CAD, C++, Arduino]
+
+image: /assets/images/hexapod_v1_real.JPG
+
+
+folder: project
+
+excerpt: I built an 18-DOF walking robot with custom PCBs, inverse kinematics, and embedded control. I created a GUI dashboard for visualizing the robot's motion behaviors in Python, and used AprilTags to support localization.
+
+role: Independent Project
+
+status: Ongoing
+
+platform: Arduino Mega
+
+languages: C++, Python
+
+hero: /assets/images/hexapod_v1_real.JPG
+
+in_main: true
+
+summary: >
+  Designed and built an 18-DOF walking robot with
+  custom electronics, inverse kinematics, and
+  embedded software.
+
+tags:
+
+- Robot Perception
+- PCB Design
+- Sensor Integration
+- C++
+- Python
+- Arduino
+
+overview:
+  I designed and built an 18-DOF walking robot from the
+  ground up, developing the mechanical structure,
+  custom electronics, inverse kinematics, and embedded
+  control software. Throughout the project I iterated
+  through multiple hardware revisions while learning PCB
+  design, thermal considerations, and robotic locomotion.
+
+contributions:
+
+- Designed custom PCB
+- Implemented inverse kinematics
+- Built PyQt visualization software
+- Manufactured 3D printed chassis
+- Integrated AprilTag localization
+
+journey:
+
+- title: CAD Design
+  image: /assets/images/hexapodv1.png
+  description: Initial mechanical concept.
+  date: Jun 2024
+
+- title: First Prototype
+  image: /assets/images/hexapod_v1_real.jpg
+  description: First walking robot.
+  date: Aug 2024
+
+- title: Software
+  image: /assets/images/interpolate.png
+  description: Developed visualization dashboard.
+  date: June 2025
+
+- title: Electronics
+  image: /assets/images/board_done_cooking.JPG
+  description: Designed custom PCB.
+  date: Feb 2026
+
+- title: Current Robot
+  image: /assets/images/placeholder.jpg
+  description: Integrated complete system.
+  date: Present
+
+challenges:
+
+- icon: bi-lightning-charge
+  title: High Current Spikes
+  problem: Servo loads caused voltage drops.
+  solution: Designed wide copper power distribution PCB.
+
+- icon: bi-calculator
+  title: Inverse Kinematics
+  problem: Walking required accurate foot placement.
+  solution: Implemented analytical inverse kinematics.
+
+- icon: bi-bug
+  title: Visualization
+  problem: Difficult to debug robot motion.
+  solution: Built PyQt dashboard.
+
+
+
+technologies:
+
+#   - icon: bi-cpu
+#     name: Arduino Mega
+#     description: Main robot controller
+
+  - icon: bi-code-slash
+    name: C++
+    description: Inverse kinematics & gait control
+
+  - icon: bi-window
+    name: PyQT
+    description: Building the visualization dashboard GUI
+
+#   - icon: bi-diagram-3
+#     name: KiCad
+#     description: Custom PCB design
+
+  - icon: bi-box
+    name: Onshape
+    description: Mechanical CAD
+
+  - icon: bi-layers
+    name: KiCad
+    description: Designing the PCB and prepare for manufacture
+
+  - icon: bi-gear
+    name: ANSYS FEA
+    description: Informing mechanical redesign with structural loading information 
+
+
+gallery:
+
+- /assets/images/hex_buck_sch.png
+- /assets/images/hexapodv2.png
+- /assets/images/placeholder.jpg
+
+lessons:
+
+- Simulation accelerates development.
+- Visualization tools save debugging time.
+- PCB layout matters more than expected.
+
+---

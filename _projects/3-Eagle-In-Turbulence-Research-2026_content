@@ -1,0 +1,156 @@
+---
+layout: project
+
+title: Eagle in Turbulence Research
+
+subtitle: MATLAB • Wind Tunnel Testing • Statistical Analysis
+
+timeline: February 2025 - July 2026
+
+role: Student Researcher
+
+status: Completed
+
+platform: MATLAB, Dantec Hotwire Measurement Unit
+
+languages: MATLAB
+
+description: Analyzing lift distributions of eagle models in turbulence
+
+technologies: [Wind Tunnel Testing, MATLAB, Statistical Analysis]
+
+image: /assets/images/gem_windtunnel.JPG
+
+folder: project
+
+hero: /assets/images/gem_windtunnel.JPG
+
+in_main: true
+
+excerpt: Over the past summer, I worked as a student researcher at the Bewley Applied Turbulence Lab at Cornell. I created 15-minute wind tunnel experiments at 80 Hz to quantify turbulence responses of eagle models, analyzing lift distributions and frequency characteristics in MATLAB.
+
+summary: > 
+     Over the past summer, I worked as a student researcher at the Bewley Applied Turbulence Lab at Cornell. I created 15-minute wind tunnel experiments at 80 Hz to quantify turbulence responses of eagle models, analyzing lift distributions and frequency characteristics in MATLAB.
+
+tags:
+
+- Statistical Analysis
+- Test Fixture Design
+- MATLAB
+- Wind Tunnel Testing
+
+overview:
+    I investigated turbulence-induced lift responses across 13 angles of attack from -7˚ to 5˚ and 5–7 turbulence intensity conditions, identifying a nonlinear relationship between angle of attack and lift distribution skewness. Found that eagle models exhibited enhanced vertical acceleration fluctuations under turbulent flow for both symmetric and asymmetric airfoil configurations.
+
+contributions:
+
+- Conducted 15-minute wind tunnel experiments at 80 Hz to quantify turbulence responses of eagle models, analyzing lift distributions and frequency characteristics in MATLAB.
+- Investigated turbulence-induced lift responses across 13 angles of attack from -7˚ to 5˚ and 5–7 turbulence intensity conditions, identifying a nonlinear relationship between angle of attack and lift distribution skewness.
+- Verified convergence of third-moment estimates using displacement autocorrelation and PDF-integrand analysis, establishing that 15-minute measurement windows provided sufficiently converged results.
+- Characterized turbulence intensity with single-wire hot-wire anemometers (5 µm, platinum) at 6kHz and calibrated against simultaneously collected Pitot-tube data.
+- Found that eagle models exhibited enhanced vertical acceleration fluctuations under turbulent flow for both symmetric and asymmetric airfoil configurations.
+- Conducted experimental validation of mechanical noise, EMI, mounting configuration, and other environmental/setup effects to verify that measured turbulence responses were not dominated by experimental artifacts.
+
+journey:
+
+- title: Test Fixure Design
+  image: /assets/images/gem_stand_cad.png
+  description: Creating the test stand to hold the eagle model
+  date: May 2025
+
+- title: Electronics Bay Design
+  image: /assets/images/gem_electronics.jpg
+  description: Finding an effective eagle model to capture in-tunnel turbulence
+  date: October 2025
+
+- title: Data Collection
+  image: /assets/images/gem_windtunnel.JPG
+  description: Designed custom PCB.
+  date: Jan 2024
+
+- title: Environment Validation
+  image: /assets/images/gem_on_top_of_tunnel.JPG
+  description: Developed visualization dashboard.
+  date: May 2023
+
+- title: Statical Validation
+  image: /assets/images/gem_validation.png
+  description: Integrated complete system.
+  date: March 2024
+
+
+
+challenges:
+
+- icon: bi-journal-text
+  title: Experimental Setup
+  problem: Finding the right setup for capturing turbulence
+  solution: Calculated the characteristic length of the eagle with varying turbulence grid sizes. Determined the right wingspan of the eagle through hand calculations
+
+- icon: bi-people
+  title: Validation
+  problem: Collected data was interesting, but is it trustworthy?
+  solution: Validated collected data through checking convergence in the skewness integrand's distribution. Confirmed the skewness plots through plotting the autocorrelation function
+
+- icon: bi-search
+  title: Data Analysis
+  problem: Parsing through sets with large amounts of data 
+  solution: Created custom MATLAB script for automating data processing and plotting
+
+technologies:
+
+#   - icon: bi-cpu
+#     name: Arduino Mega
+#     description: Main robot controller
+
+#   - icon: bi-code-slash
+#     name: C++
+#     description: Inverse kinematics & gait control
+
+#   - icon: bi-window
+#     name: PyQt
+#     description: Robot visualization dashboard
+
+#   - icon: bi-diagram-3
+#     name: KiCad
+#     description: Custom PCB design
+
+  - icon: bi-box
+    name: Onshape
+    description: Mechanical CAD
+
+  - icon: bi-layers
+    name: MATLAB
+    description: Data analysis and plotting
+
+  - icon: bi-gear
+    name: Wind Tunnel
+    description: Setting up and conducting experiments with turbulence
+
+  - icon: bi-gear
+    name: Drills
+    description: Modifying the grid to change turbulence intensity
+
+
+#   - icon: bi-battery-charging
+#     name: Power Electronics
+#     description: Buck converters & power distribution
+
+#   - icon: bi-camera
+#     name: AprilTags
+#     description: Pose estimation
+
+gallery:
+
+- /assets/images/gem_test_stand_in_tunnel.JPG
+- /assets/images/gem_mesh.JPG
+- /assets/images/3dprinted_gears.JPG
+- /assets/images/cnc-ed_plate.JPG
+
+lessons:
+
+- Experimental results are only as good as the measurement system behind them
+- Experimental design and iteration is crucial
+- Unexpected results lead to investigation
+
+---

@@ -1,0 +1,516 @@
+/* ============================
+   Design System
+============================ */
+
+$card-radius: 18px;
+$section-gap: 70px;
+
+$background: #08111f;
+$card-bg: #1b1e24;
+
+$accent: #5c7ba7;
+$accent-light: #8fb2e6;
+
+$text-primary: #ffffff;
+$text-secondary: #bfc5d2;
+
+$border: #2b3446;
+$shadow: 0 10px 30px rgba(0,0,0,.35);
+
+
+
+.project-page {
+
+    font-family: 'Montserrat', sans-serif;
+    width: 85%;
+    margin: 0 auto;
+    font-size: 15px;
+
+}
+
+.project-page p {
+
+    font-family: 'Montserrat', sans-serif;
+
+    color: $text-secondary;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+}
+
+.project-page section {
+
+    font-family: 'Montserrat', sans-serif;
+
+    width: 100%;
+
+    margin-bottom: $section-gap;
+
+}
+
+.project-hero {
+    font-family: 'Montserrat', sans-serif;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    align-items: center;
+
+    margin: 60px 0;
+
+    margin-bottom: $section-gap;
+
+}
+
+.hero-image {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.hero-image img {
+
+    width: 100%;
+
+    max-width: 550px;
+
+    height: auto;
+
+    border-radius: $card-radius;
+    box-shadow: $shadow;
+
+    display: block;
+
+}
+
+.hero-summary {
+
+    color: $text-secondary;
+
+    font-size: 1.05rem;
+
+}
+
+.hero-text > a {
+
+    display: inline-block;
+
+    margin-top: -20px;
+
+    color: $accent-light;
+
+    margin-bottom: 30px;
+
+}
+
+.back-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: $accent-light;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+.back-link:hover {
+
+    color: white;
+
+    text-decoration: underline;
+
+    transform: translateY(-2px);
+
+}
+
+.hero-text h1 {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 2.4rem;
+
+    font-weight: 400;   /* try 300, 400, or 500 */
+
+    letter-spacing: -0.03em;
+
+    margin-bottom: 18px;
+
+}
+
+.quick-icon {
+
+    color: $accent-light;
+
+    font-size: 1.5rem;
+
+    margin-bottom: 12px;
+
+    display: block;
+
+}
+
+.quick-facts {
+
+    display: grid;
+
+    grid-template-columns: repeat(5,1fr);
+
+    gap: 18px;
+
+}
+
+.quick-facts > div {
+
+    background: #151922;
+
+    border: 1px solid $border;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    text-align: left;
+
+}
+
+.quick-facts h4 {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    color: $accent-light;
+
+    margin-bottom: 5px;
+
+    letter-spacing: .08em;
+
+}
+
+.quick-facts p {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.85rem;
+
+    font-weight: 500;
+
+    color: $text-primary;
+
+    margin: 0;
+
+    line-height: 1.4;
+
+}
+
+.project-page section {
+
+    background: $card-bg;
+
+    border: 1px solid $border;
+
+    border-radius: $card-radius;
+
+    padding: 32px;
+
+    margin-bottom: $section-gap;
+
+    box-shadow: $shadow;
+
+}
+
+.project-page h2 {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 1.5rem;
+
+    font-weight: 500;
+
+    color: $accent-light;
+
+    border-left: 4px solid $accent;
+
+    padding-left: 18px;
+
+    margin-bottom: 24px;
+
+}
+
+.two-column {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    margin: 60px 0;
+
+}
+
+.two-column ul {
+
+    list-style: none;
+
+    padding: 0;
+
+}
+
+.two-column li {
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid $border;
+
+}
+
+.overview p {
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 1rem;
+
+    font-weight: 400;
+
+    line-height: 1.8;
+
+}
+
+.journey {
+
+    display: grid;
+
+    grid-template-columns: repeat(5,1fr);
+
+    gap: 20px;
+
+}
+
+.journey-card {
+
+    background: #151922;
+
+    border-radius: 14px;
+
+    border: 1px solid $border;
+
+    padding: 18px;
+
+}
+
+.journey-card img {
+    width: 100%;
+
+    height: 140px;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    border-radius: 10px;
+}
+
+.challenge-arrow{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.challenge-arrow i{
+
+    font-size:1.8rem;
+
+    color:$accent-light;
+
+}
+
+.challenge-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 20px;
+
+}
+
+.challenge-tech{
+
+    display:grid;
+
+    grid-template-columns:1.7fr 1fr;
+
+    gap:24px;
+
+}
+
+.challenge-row{
+
+    display:grid;
+
+    grid-template-columns:
+        55px
+        1.4fr
+        60px
+        1.4fr;
+
+    align-items:center;
+
+    padding:22px 18px;
+
+    border-bottom:1px solid $border;
+
+}
+
+.technical-challenges,
+.technology-panel{
+
+    background:#151922;
+
+    border:1px solid $border;
+
+    border-radius:14px;
+
+    padding:24px;
+
+}
+
+.tech-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:14px;
+
+}
+
+.tech-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    background:#151922;
+
+    border:1px solid $border;
+
+    border-radius:12px;
+
+    padding:16px;
+
+}
+
+.tech-card:last-child {
+
+    border-bottom: none;
+
+}
+
+.tech-card i {
+
+    font-size: 1.5rem;
+
+    color: $accent-light;
+
+    width: 28px;
+
+    text-align: center;
+
+}
+
+.tech-icon{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:10px;
+
+    border:1px solid $accent;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+}
+
+.tech-icon i{
+
+    color:$accent-light;
+
+    font-size:1.2rem;
+
+}
+
+.tech-card strong {
+
+    display: block;
+
+    color: $text-primary;
+
+    margin-bottom: 4px;
+
+}
+
+.tech-card p {
+
+    margin: 0;
+
+    color: $text-secondary;
+
+    font-size: .9rem;
+
+}
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 20px;
+
+}
+
+.gallery img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    display: block;
+
+}

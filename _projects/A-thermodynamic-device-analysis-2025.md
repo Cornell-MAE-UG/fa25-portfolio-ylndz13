@@ -1,4 +1,5 @@
 ---
+published: false
 layout: project
 title: MAE 2210 Thermodynamics -- Device Analysis (FA 2025)
 description: Heat Exchanger

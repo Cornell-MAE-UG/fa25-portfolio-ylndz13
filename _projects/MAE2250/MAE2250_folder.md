@@ -1,4 +1,5 @@
 ---
+published: false
 layout: project_folder
 title: MAE 2250 Folder (SP 2026)
 permalink: /projects/MAE2250/

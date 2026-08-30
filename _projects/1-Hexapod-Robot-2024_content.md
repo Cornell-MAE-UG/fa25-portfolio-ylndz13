@@ -1,11 +1,23 @@
 ---
 layout: project
-title: Hexapod Robot (2026)
+
+title: Hexapod Robot
+
+subtitle: Robotics • Embedded Systems • Custom Electronics
+
+timeline: June 2024 – Present
+
 description: Making a hexapod from scratch and learning about the electrical system and code...
-technologies: [Inverse Kinematics, Power regulator circuit, CAD, C++, PCB, Arduino]
+
+technologies: [Inverse Kinematics, Power PCB, Perception, CAD, C++, Arduino]
+
 image: /assets/images/hexapod_v1_real.JPG
+
 folder: project
-in_main: true
+
+in_main: false
+
+excerpt: I built an 18-DOF walking robot with custom PCBs, inverse kinematics, and embedded control. I created a GUI dashboard for visualizing the robot's motion behaviors in Python, and used AprilTags to support localization.
 ---
 
 <script>

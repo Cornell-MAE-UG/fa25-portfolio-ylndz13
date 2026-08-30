@@ -1,11 +1,16 @@
 ---
 layout: project
-title: FSAE Dash Mechanical (2025)
+title: FSAE Dash Mechanical
+subtitle: Robotics • Embedded Systems • Custom Electronics
+
+timeline: July 2025 – June 2026
+
 description: Integrating the Dash PCB to the rest of the car
 technologies: [Integration, Inventor, RapidHarness, Jig, Communication]
-image: /assets/images/dash_assembly.png
+image: /assets/images/dash_dashboard.JPG
 folder: project
-in_main: true
+in_main: false
+excerpt: I designed the dashboard on our 2026 FSAE EV car. 
 ---
 
 <h5> Overview:</h5>
@@ -21,7 +26,7 @@ in_main: true
 The purpose of the dashboard is to display crucial information to the driver and people working on the car. The purpose of the dashboard on the 2026 car is to house the Dash PCB & screen, providing necessary electrical connections and a waterproof enclosure. In addition, Dash Mechanical displays drive-critical faults to drivers and holds the Estops & startup button. My part works closely around other parts, such as the dashboard screen and PCB, the monocoque (body of the car), and the low voltage harness. I also designed the mounting structure for the roll hoop estops this year.
 
 <h5> Mechanical Enclosure: </h5>
-<img src="{{ '/assets/images/enclosure_stackup.png' | relative_url }}"
+<img src="{{ '/assets/images/dash_enclosure_stackup.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
 
 The Dash enclosure is split into two parts: the screen lid and the PCB enclosure. The entirety of the enclosure is secured through four flathead M3 bolts. The design choice behind using flathead M3 bolts is to maintain the flat aesthetic of the screen lid of the enclosure.
@@ -36,7 +41,7 @@ The waterproofing is achieved by countersinking the screen lid and using gaskets
 <h5> Integration</h5>
 
 <div class = "two-images"> 
-<img src="{{ '/assets/images/integration_monocoque.png' | relative_url }}"
+<img src="{{ '/assets/images/dash_integration_monocoque.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
 <img src="{{ '/assets/images/integration_pcb.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
@@ -48,9 +53,9 @@ The PCB enclosure will undergo slight modifications to ensure fitment inside the
 
 <h5>Estop Mounts:</h5>
 <div class = "two-images"> 
-<img src="{{ '/assets/images/estop_integration.png' | relative_url }}"
+<img src="{{ '/assets/images/dash_estop_integration.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
-<img src="{{ '/assets/images/estop_jig_on_car.JPG' | relative_url }}"
+<img src="{{ '/assets/images/dash_estop_jig_on_car.JPG' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
 </div>
 <figcaption>Estop mount on the car (right: after welded on car using jig)</figcaption>
@@ -65,13 +70,13 @@ The harnessing connections underwent a series of changes throughout the design s
 <img src="{{ '/assets/images/dash_harness_from_altium.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
 
-<img src="{{ '/assets/images/rapidharness_schematic.png' | relative_url }}"
+<img src="{{ '/assets/images/dash_rapidharness_schematic.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
 
 <div class = "two-images"> 
-<img src="{{ '/assets/images/rapidharness_page1.png' | relative_url }}"
+<img src="{{ '/assets/images/dash_rapidharness_page1.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
-<img src="{{ '/assets/images/rapidharness_page2.png' | relative_url }}"
+<img src="{{ '/assets/images/dash_rapidharness_page2.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
  </div>
 The harnessing connections to the fault lights and buttons were designed in RapidHarness and manufactured by me based on the dimensions in RapidHarness. 
@@ -84,7 +89,7 @@ This is a photo of the dashboard harness after I manufactured it. The wires are 
 
 <h5>Bill of Materials</h5>
 
-<img src="{{ '/assets/images/components.png' | relative_url }}"
+<img src="{{ '/assets/images/dash_components.png' | relative_url }}"
      style="display: block; width: 100%; margin: 0rem auto;">
 
 Some more thought went behind the selection for the button, as according to last year, the startup button got jammed after someone pressed it too hard, so this year I looked for IK10 (maximum spring force rating) in addition to the waterproof rating.
