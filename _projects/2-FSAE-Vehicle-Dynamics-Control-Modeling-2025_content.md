@@ -15,7 +15,7 @@ description: Designing controllers to optimize FSAE race car performance
 
 technologies: [MATLAB, Torque Vectoring, Traction Control, Power Limiting]
 
-image: /assets/images/dashboard.JPG
+image: /assets/images/VD_pid_graph.png
 
 folder: project
 

@@ -9,7 +9,7 @@ title: <Your Name>
 ![Profile Picture]({{ "assets/images/YZ.JPEG" | relative_url }}){: class="YZ"}
 
  
-Hi! My name is Xinyuan (Yolanda) Zhou, a sophomore at Cornell University pursuing a major in Mechanical and Aerospace Engineering and minors in Computer Science (CS) and Electrical and Computer Engineering (ECE).
+Hi! My name is Xinyuan (Yolanda) Zhou, a junior at Cornell University pursuing a major in Mechanical and Aerospace Engineering and minors in Computer Science (CS) and Electrical and Computer Engineering (ECE).
 
 My interests are robotics dynamics modeling and feedback control, machine learning, integration, PCB design, aerodynamic simulation.
 
